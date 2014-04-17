@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>BuzzPrint</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ url_for("static", filename="normalize.min.css") }}">
+        <link rel="stylesheet" href="{{ url_for("static", filename="main.css") }}">
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+	<div class="header-container">
+	    <header class="wrapper clearfix">
+		<h1 class="title">BuzzPrint</h1>
+		<nav>
+		    <ul>
+		        <li><a href="#">Logout</a></li>
+		    </ul>
+		</nav>
+	    </header>
+	</div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+                        <span id="user">You are logged in as {{ username }}</span>
+			<div style="clear: both;"></div>
+
+                <article>
+                    <header>
+			{% if success %}
+			<div id="printsuccess" class="statusbox"><p>{{ success }}</p></div>
+			{% endif %}
+			{% if error %}
+			<div id="printerror" class="statusbox"><p>{{ error }}</p></div>
+			{% endif %}
+                    </header>
+<form action="" method=post enctype=multipart/form-data>
+                    <section>
+                        <h2>Step One: Choose Your Document</h2>
+                        <p>You can either submit a link to an <a name="stepone" href="#alloweddocs">allowed document</a> or upload one to be printed.</p>
+
+<div id="filedialog" class="dialog">
+<input type="radio" name="type" value="file" id="file" />
+<label for="file" id="filebutton" class="button">Upload a file</label>
+<input type="file" name="file">
+</div>
+
+<div id="urldialog" class="dialog">
+<input type="radio" name="type" value="url" id="url" />
+<label for="url" id="urlbutton" class="button">Submit a URL</label>
+<input type="text" name="url" placeholder="Enter URL to PDF or Google Doc">
+</div>
+                    </section>
+<section>
+<h2>Step Two: Select Your Queue</h2>
+<p>Each of the queues below has a <a name="steptwo" href="#queuepurposes">different purpose</a>; you can choose one of the queues below to send your job to.</p>
+
+<div class="queue">
+<input type="radio" name="queue" value="black" id="black" />
+<label for="black" class="button">Black</label>
+</div>
+
+<div class="queue">
+<input type="radio" name="queue" value="color" id="color" />
+<label for="color" class="button">Color</label>
+</div>
+<!--
+<div class="queue">
+<input type="radio" name="queue" value="staple" id="staple" />
+<label for="staple" class="button">mobile_staple</label>
+</div>
+-->
+
+<div class="queue">
+<input type="radio" name="queue" value="central" id="central" />
+<label for="central" class="button">CPS</label>
+</div>
+</section>
+
+<section>
+<h2>Step Three: Submit Your Job</h2>
+<input type=submit id="print">
+<label for="print" id="printbutton" class="button">Print</label>
+</section>
+</form>
+
+                    <footer>
+                        <a name="alloweddocs"><h3>Allowed documents</h3></a>
+			<ul>
+			<li>PDF Documents</li>
+			<li>Google Documents</li>
+			<li>Google Presentations</li>
+			<li>Google Drawings</li>
+			</ul>
+[<a href="#stepone">Back to Step One</a>]
+
+                        <a name="queuepurposes"><h3>Queues</h3></a>
+			<ul>
+			<li>Black: black-and-white printing</li>
+			<li>Color: color printing</li>
+			<li>CPS: submitting to Central Printing Service</li>
+			</ul>
+[<a href="#steptwo">Back to Step Two</a>]
+                    </footer>
+                </article>
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>BuzzPrint is not an official Georgia Tech resource. BuzzPrint is an LCC 3403 project created by some people.</h3>
+            </footer>
+        </div>
+    </body>
+</html>
