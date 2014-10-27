@@ -13,15 +13,15 @@ from flask import Flask, request, make_response, render_template, session, url_f
 
 app = Flask(__name__)
 app.secret_key = urandom(16)
-app.config['UPLOAD_FOLDER'] = '/tmp'
+app.config['UPLOAD_FOLDER'] = '/home/birm/buzzprint/BuzzPrint/tmp'
 
 extensions = set(['pdf'])
 protocols = set(['http', 'https'])
-callback = "http://webprint.gtisc.gatech.edu/auth"
+callback = "http://stabbist.cc.gt.atl.ga.us/auth"
 
 # Simple init stuff - logging, debug, stuff like that.
 def init():
-	logfile = '/opt/print_logs'
+	logfile = '/home/birm/buzzprint/BuzzPrint/print_logs/log'
 
 	handler = logging.FileHandler(logfile)
 	handler.setFormatter(logging.Formatter('[%(levelname)s]: %(message)s'))
