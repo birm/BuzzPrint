@@ -10,7 +10,7 @@ textarea {
 
 html {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: 0.4;
 }
 
 ::-moz-selection {
@@ -27,7 +27,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 0px solid #ccc;
     margin: 1em 0;
     padding: 0;
 }
@@ -67,7 +67,7 @@ body {
 
 .wrapper {
     width: 90%;
-    margin: 0 5%;
+    margin: 3%;
 }
 
 /* ===================
@@ -75,18 +75,18 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #00254c;
+    border-bottom: 6px solid #DDC600;
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #00254c;
+    border-top: 5px solid #DDC600;
 }
 
 .header-container,
 .footer-container,
 .main aside {
-    background: #c59353;
+    background: #000000;
 }
 
 .title {
@@ -105,7 +105,7 @@ nav ul {
 nav a {
     display: block;
     margin-bottom: 10px;
-    padding: 15px 0;
+    padding: 5px 0;
 
     text-align: center;
     text-decoration: none;
@@ -129,11 +129,11 @@ nav a:hover {
    ============== */
 
 .main {
-    padding: 30px 0;
+    padding: 1px 0;
 }
 
 .main article h1 {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 .main aside {
@@ -143,7 +143,7 @@ nav a:hover {
 
 .footer-container footer {
     color: white;
-    padding: 20px 0;
+    padding: 2px;
 }
 
 /* ===============
@@ -151,7 +151,7 @@ nav a:hover {
    =============== */
 
 .ie7 .title {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 /* ==========================================================================
@@ -166,18 +166,18 @@ nav a:hover {
 		}
 
 	* > input[type=radio]:checked + label {
-		border-top-color: #eeb211;
-		background: #eeb211;
+		border-top-color: #DDC600;
+		background: #DDC600;
 		}
 
 	.dialog > input[type=radio]:checked + label + input[type=file],
 	.dialog > input[type=radio]:checked + label + input[type=text] {
 		display:block;
-		margin-top:20px;
+		margin-top:10px;
 		}
 
 	#filedialog {
-/*		margin-bottom:20px;*/
+/*		margin-bottom:5px;*/
 		}
 
 	nav li a {
@@ -191,46 +191,46 @@ nav a:hover {
 
 
 	.button {
-		border-top: 1px solid #ffffff;
-		background: #00254c;
-		background: -webkit-gradient(linear, left top, left bottom, from(#00254c), to(#00254c));
-		background: -webkit-linear-gradient(top, #00254c, #00254c);
-		background: -moz-linear-gradient(top, #00254c, #00254c);
-		background: -ms-linear-gradient(top, #00254c, #00254c);
-		background: -o-linear-gradient(top, #00254c, #00254c);
-		padding: 4.5px 9px;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
+		border-top: 0px solid #000000;
+		background: #BBA400;
+		background: -webkit-gradient(linear, left top, left bottom, from(#BBA400), to(#FFD700));
+		background: -webkit-linear-gradient(top, #CCB500, #BBA400);
+		background: -moz-linear-gradient(top, #CCB500, #BBA400);
+		background: -ms-linear-gradient(top, #CCB500, #BBA400);
+		background: -o-linear-gradient(top, #CCB500, #BBA400);
+		padding: 3px 7px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
 		-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
 		-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-		box-shadow: rgba(0,0,0,1) 0 1px 0;
+		box-shadow: rgba(0,0,0,1) 1px 1px 1px;
 		text-shadow: rgba(0,0,0,.4) 0 1px 0;
 		color: white;
-		font-size: 24px;
+		font-size: 15px;
 		font-family: Helvetica, Arial, Sans-Serif;
 		text-decoration: none;
 		vertical-align: middle;
 		}
 
 	#printbutton {
-		border-top: 1px solid #ffffff;
-		background: #eeb211;
-		background: -webkit-gradient(linear, left top, left bottom, from(#eeb211), to(#eeb211));
-		background: -webkit-linear-gradient(top, #eeb211, #eeb211);
-		background: -moz-linear-gradient(top, #eeb211, #eeb211);
-		background: -ms-linear-gradient(top, #eeb211, #eeb211);
-		background: -o-linear-gradient(top, #eeb211, #eeb211);
-		padding: 4.5px 9px;
+		border-top: 0px solid #ffffff;
+		background: #BBA400;
+		background: -webkit-gradient(linear, left top, left bottom, from(#BBA400), to(#FFD700));
+		background: -webkit-linear-gradient(top, #CCB500, #BBA400);
+		background: -moz-linear-gradient(top, #CCB500, #BBA400);
+		background: -ms-linear-gradient(top, #CCB500, #BBA400);
+		background: -o-linear-gradient(top, #CCB500, #BBA400);
+		padding: 7px 11px;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
 		-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
 		-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-		box-shadow: rgba(0,0,0,1) 0 1px 0;
+		box-shadow: rgba(0,0,0,1) 2px 2px 2px;
 		text-shadow: rgba(0,0,0,.4) 0 1px 0;
 		color: white;
-		font-size: 24px;
+		font-size: 30px;
 		font-family: Helvetica, Arial, Sans-Serif;
 		text-decoration: none;
 		vertical-align: middle;
@@ -238,23 +238,23 @@ nav a:hover {
 
 	.button:hover,
 	#printbutton:hover {
-		border-top-color: #d59900;
-		background: #d59900;
-		color: #ffffff;
+		border-top-color: #DDC600;
+		background: #DDC600;
+		color: #ffffFF;
 		}
 
 	.button:active,
 	#printbutton:active {
-		border-top-color: #bb7f00;
+		border-top-color: #DDFF00;
 		background: #bb7f00;
 		}
 
 	#printerror {
-		background: #f33 url("error.png") no-repeat left center;
+		background: #FF3333 url("error.png") no-repeat left center;
 		}
 
 	#printsuccess {
-		background: #c59353 url("success.png") no-repeat left center;
+		background: #FFD700 url("success.png") no-repeat left center;
 		}
 
 	.statusbox {
@@ -276,7 +276,7 @@ nav a:hover {
 	.dialog, .queue {
 		padding-top:5px;
 		padding-bottom:6px;
-		margin-bottom:10px;
+		margin-bottom:8px;
 		}
 
 	.dialog > input[type=file],
@@ -314,7 +314,7 @@ nav a:hover {
 		}
 
 	.statusbox p {
-		margin:0 0 0 5em;
+		margin:0 0 0 2em;
 		word-wrap:normal;
 		}
 
@@ -538,4 +538,4 @@ nav a:hover {
     h3 {
         page-break-after: avoid;
     }
-}
+  }
